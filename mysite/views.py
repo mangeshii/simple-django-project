@@ -18,7 +18,7 @@ def analyze(request):
         punctuations = ''' !*()[]'";:,<.>/? '''
         analyzed = ""
         for char in djtext:
-            if char not in punctuations:
+            if char not in punctuations:  
                 analyzed = analyzed + char
 
         params = {'purpose': 'Removed Punctuations', 'analyzed_text': analyzed}
