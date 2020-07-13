@@ -28,8 +28,8 @@
           <li class="nav-item">
             <a class="nav-link" href="#">Contact Us</a>
           </li>
-         
-          <li class="nav-item">    
+
+          <li class="nav-item">
             <a class="nav-link " href="#" tabindex="-1" aria-disabled="true">About</a>
           </li>
         </ul>
@@ -41,43 +41,45 @@
     </nav>
 
     <div class="container">
-    <form action='/analyze' method='get'>
-      
-      <div class="form-group my-5 shadow p-3 mb-5 bg-white rounded">
-        
-        <label for="exampleFormControlTextarea1"><h2>Enter your text here and let the Text Util do the magic</h2></label>
-        <textarea class="form-control" name='text' id="exampleFormControlTextarea1" rows="7"></textarea>
-      </div>
-    
+      <form action='/analyze' method='get'>
 
-    <div class="custom-control custom-switch">
-      <input type="checkbox"  name='removepunc' class="custom-control-input" id="customSwitch1">
-      <label class="custom-control-label" for="customSwitch1">Remove Punctuations</label>
-    </div>
+        <div class="form-group my-5 shadow p-3 mb-5 bg-white rounded">
 
-    <div class="custom-control custom-switch">
-      <input type="checkbox" name='allcaps' class="custom-control-input" id="customSwitch2">
-      <label class="custom-control-label" for="customSwitch2">Uppercase</label>
-    </div>
+          <label for="exampleFormControlTextarea1">
+            <h2>Enter your text here and let the Text Util do the magic</h2>
+          </label>
+          <textarea class="form-control" name='text' id="exampleFormControlTextarea1" rows="7"></textarea>
+        </div>
 
-    <div class="custom-control custom-switch">
-      <input type="checkbox" name='removespace' class="custom-control-input" id="customSwitch3">
-      <label class="custom-control-label" for="customSwitch3">Remove Extra Space</label>
-    </div>
 
-    <div class="custom-control custom-switch">
-      <input type="checkbox" name='removenewline' class="custom-control-input" id="customSwitch4">
-      <label class="custom-control-label" for="customSwitch4">Remove New Line</label>
-    </div>
+        <div class="custom-control custom-switch">
+          <input type="checkbox" name='removepunc' class="custom-control-input" id="customSwitch1">
+          <label class="custom-control-label" for="customSwitch1">Remove Punctuations</label>
+        </div>
 
-    <div class="custom-control custom-switch" >
-      <input type="checkbox" name='countchar' class="custom-control-input" id="customSwitch5">
-      <label class="custom-control-label" for="customSwitch5">Count Character</label>
-    </div>
-   
+        <div class="custom-control custom-switch">
+          <input type="checkbox" name='allcaps' class="custom-control-input" id="customSwitch2">
+          <label class="custom-control-label" for="customSwitch2">Uppercase</label>
+        </div>
 
-    <button type="submit" class="btn btn-dark my-2">Analyze Text</button>
-    </form>
+        <div class="custom-control custom-switch">
+          <input type="checkbox" name='removespace' class="custom-control-input" id="customSwitch3">
+          <label class="custom-control-label" for="customSwitch3">Remove Extra Space</label>
+        </div>
+
+        <div class="custom-control custom-switch">
+          <input type="checkbox" name='removenewline' class="custom-control-input" id="customSwitch4">
+          <label class="custom-control-label" for="customSwitch4">Remove New Line</label>
+        </div>
+
+        <div class="custom-control custom-switch">
+          <input type="checkbox" name='countchar' class="custom-control-input" id="customSwitch5">
+          <label class="custom-control-label" for="customSwitch5">Count Character</label>
+        </div>
+
+
+        <button type="submit" class="btn btn-dark my-2">Analyze Text</button>
+      </form>
     </div>
 
 

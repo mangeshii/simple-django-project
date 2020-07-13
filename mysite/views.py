@@ -18,13 +18,12 @@ def analyze(request):
         punctuations = ''' !*()[]'";:,<.>/? '''
         analyzed = ""
         for char in djtext:
-            if char not in punctuations:  
+            if char not in punctuations:
                 analyzed = analyzed + char
 
         params = {'purpose': 'Removed Punctuations', 'analyzed_text': analyzed}
-        djtext=analyzed
+        djtext = analyzed
         #return render(request, 'analyze.html', params)
-
 
     if (capital == "on"):
         analyzed = ""
@@ -35,48 +34,37 @@ def analyze(request):
         djtext = analyzed
         #return render(request, 'analyze.html', params)
 
-
     if (spaceremove == "on"):
         analyzed = ""
-        for index, char in enumerate(djtext):
-            if djtext[index] == " " and djtext[index+1] == " ":
-                pass
-            else:
-                analyzed = analyzed + char
+        analyzed=" ".join(djtext.split())
 
         params = {'purpose': 'extra space remover', 'analyzed_text': analyzed}
         djtext = analyzed
         #return render(request, 'analyze.html', params)
-        
 
     if (newlineremove == "on"):
         analyzed = ""
         for char in djtext:
-            if char != "\n":
+            if char != "\n" and char != "\r":
                 analyzed = analyzed+char
 
         params = {'purpose': 'remove extra line', 'analyzed_text': analyzed}
-        djtext=analyzed
+        djtext = analyzed
         #return render(request, 'analyze.html', params)
-
 
     if (charcount == "on"):
         analyzed = ""
 
-        count=0
+        count = 0
         for char in djtext:
-            count +=1
-            analyzed=count
+            count += 1
+            analyzed = count
 
         params = {'purpose': 'count char', 'analyzed_text': analyzed}
         #djtext = analyzed
         #return render(request, 'analyze.html', params)
-        
+
     if (removep != "on" and capital != "on" and spaceremove != "on" and newlineremove != "on" and charcount != "on"):
         return HttpResponse("Error")
-    
-    
-    return render(request,'analyze.html',params)
-  
 
-
+    return render(request, 'analyze.html', params)
