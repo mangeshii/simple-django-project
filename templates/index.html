@@ -41,7 +41,7 @@
     </nav>
 
     <div class="container">
-      <form action='/analyze' method='get'>
+      <form action='/analyze' method='POST' >{% csrf_token %}
 
         <div class="form-group my-5 shadow p-3 mb-5 bg-white rounded">
 
