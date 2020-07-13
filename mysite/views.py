@@ -36,7 +36,7 @@ def analyze(request):
 
     if (spaceremove == "on"):
         analyzed = ""
-        analyzed=" ".join(djtext.split())
+        analyzed=" ".join(djtext.split()) 
 
         params = {'purpose': 'extra space remover', 'analyzed_text': analyzed}
         djtext = analyzed
